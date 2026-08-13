@@ -688,7 +688,7 @@ this README is distilled from.
 ## 🧪 Running it yourself
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/lawcy0fficial/LCYcode.ai.git
 cd LCYcode.ai
 ./setup.sh
 ./run.sh              # GUI  → http://localhost:8420
