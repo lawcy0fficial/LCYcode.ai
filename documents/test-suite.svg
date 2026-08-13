@@ -1,0 +1,24 @@
+<svg width="820" height="300" viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="820" height="300" fill="#0B0E14"/>
+  <text x="410" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="#E6E9EF">test suite — 20+ consecutive stress runs, zero failures</text>
+
+  <g text-anchor="middle" font-family="'JetBrains Mono',monospace">
+    <circle cx="260" cy="150" r="90" fill="none" stroke="#232938" stroke-width="12"/>
+    <circle cx="260" cy="150" r="90" fill="none" stroke="#7C5CFF" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="565" stroke-dashoffset="565" transform="rotate(-90 260 150)">
+      <animate attributeName="stroke-dashoffset" values="565;0" dur="2.4s" fill="freeze" begin="0.2s"/>
+    </circle>
+    <text x="260" y="140" font-size="34" font-weight="800" fill="#7C5CFF">137</text>
+    <text x="260" y="168" font-size="12" fill="#838EA6">backend (pytest)</text>
+
+    <circle cx="560" cy="150" r="90" fill="none" stroke="#232938" stroke-width="12"/>
+    <circle cx="560" cy="150" r="90" fill="none" stroke="#3DDC97" stroke-width="12" stroke-linecap="round"
+            stroke-dasharray="565" stroke-dashoffset="565" transform="rotate(-90 560 150)">
+      <animate attributeName="stroke-dashoffset" values="565;83" dur="2.4s" fill="freeze" begin="0.2s"/>
+    </circle>
+    <text x="560" y="140" font-size="34" font-weight="800" fill="#3DDC97">20</text>
+    <text x="560" y="168" font-size="12" fill="#838EA6">frontend (node, no npm)</text>
+  </g>
+
+  <text x="410" y="270" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">all against mocked providers — orchestration logic verified, real-model behavior is verify_live.py's job</text>
+</svg>

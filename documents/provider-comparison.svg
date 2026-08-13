@@ -1,0 +1,31 @@
+<svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="360" fill="#0B0E14"/>
+  <text x="450" y="38" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="#E6E9EF">Ollama (default) vs. cloud fallback</text>
+
+  <rect x="60" y="70" width="360" height="250" rx="14" fill="rgba(61,220,151,0.08)" stroke="#3DDC97" stroke-width="2"/>
+  <text x="240" y="102" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#3DDC97">🟢 Ollama — default</text>
+  <g font-family="'JetBrains Mono',monospace" font-size="12" fill="#C8D0E0">
+    <text x="90" y="140">cost</text><text x="390" y="140" text-anchor="end" fill="#3DDC97">$0.00</text>
+    <text x="90" y="168">login</text><text x="390" y="168" text-anchor="end" fill="#3DDC97">none</text>
+    <text x="90" y="196">rate limit</text><text x="390" y="196" text-anchor="end" fill="#3DDC97">your hardware only</text>
+    <text x="90" y="224">data leaves device</text><text x="390" y="224" text-anchor="end" fill="#3DDC97">no</text>
+    <text x="90" y="252">enforced by</text><text x="390" y="252" text-anchor="end" fill="#3DDC97">offline_only: true</text>
+    <text x="90" y="280">tool-calling quality</text><text x="390" y="280" text-anchor="end" fill="#FFB454">model-dependent</text>
+  </g>
+
+  <rect x="480" y="70" width="360" height="250" rx="14" fill="rgba(255,180,84,0.06)" stroke="#FFB454" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="660" y="102" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#FFB454">🟠 Cloud — optional fallback</text>
+  <g font-family="'JetBrains Mono',monospace" font-size="12" fill="#C8D0E0">
+    <text x="510" y="140">cost</text><text x="810" y="140" text-anchor="end" fill="#FFB454">per-token, provider billed</text>
+    <text x="510" y="168">login</text><text x="810" y="168" text-anchor="end" fill="#FFB454">API key required</text>
+    <text x="510" y="196">rate limit</text><text x="810" y="196" text-anchor="end" fill="#FFB454">provider's limits</text>
+    <text x="510" y="224">data leaves device</text><text x="810" y="224" text-anchor="end" fill="#FFB454">yes</text>
+    <text x="510" y="252">enabled by</text><text x="810" y="252" text-anchor="end" fill="#FFB454">offline_only: false</text>
+    <text x="510" y="280">providers</text><text x="810" y="280" text-anchor="end" fill="#FFB454">OpenRouter / DeepSeek / Grok</text>
+  </g>
+
+  <circle r="6" fill="#3DDC97" opacity="0.8">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M240,320 L240,340 L660,340 L660,320"/>
+  </circle>
+  <text x="450" y="345" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#4a5268">router only crosses to the right side if offline_only is explicitly false</text>
+</svg>

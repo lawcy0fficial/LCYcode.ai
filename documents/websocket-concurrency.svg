@@ -1,0 +1,29 @@
+<svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="380" fill="#0B0E14"/>
+  <text x="450" y="36" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" font-weight="700" fill="#E6E9EF">/ws/chat — one socket, multiple concurrent sessions</text>
+
+  <rect x="380" y="70" width="140" height="50" rx="10" fill="#10141E" stroke="#7C5CFF" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12.5" fill="#7C5CFF">one socket</text>
+
+  <!-- sender queue -->
+  <rect x="380" y="150" width="140" height="34" rx="8" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF" stroke-dasharray="4 3"/>
+  <text x="450" y="172" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#7C5CFF">shared sender queue</text>
+
+  <!-- session A track -->
+  <text x="90" y="230" font-family="'JetBrains Mono',monospace" font-size="12" fill="#3DDC97">session A (started first, artificial delay)</text>
+  <rect x="90" y="240" width="720" height="16" rx="8" fill="#151A26"/>
+  <rect x="90" y="240" width="0" height="16" rx="8" fill="#3DDC97">
+    <animate attributeName="width" values="0;720" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <circle r="7" fill="#3DDC97"><animateMotion dur="5s" repeatCount="indefinite" path="M90,248 L810,248"/></circle>
+
+  <!-- session B track (finishes first) -->
+  <text x="90" y="290" font-family="'JetBrains Mono',monospace" font-size="12" fill="#FFB454">session B (started later, finishes first)</text>
+  <rect x="90" y="300" width="720" height="16" rx="8" fill="#151A26"/>
+  <rect x="90" y="300" width="0" height="16" rx="8" fill="#FFB454">
+    <animate attributeName="width" values="0;720" dur="2.6s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+  <circle r="7" fill="#FFB454"><animateMotion dur="2.6s" begin="0.6s" repeatCount="indefinite" path="M90,308 L810,308"/></circle>
+
+  <text x="450" y="345" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#838EA6">receiver loop never blocks on a run finishing · each run is its own background task · all outbound traffic (events + acks + errors) drains through one queue to avoid a send_json race</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg width="1000" height="460" viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#3DDC97"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="460" rx="16" fill="#0B0E14" stroke="#232938"/>
+  <rect width="1000" height="40" rx="16" fill="#10141E"/>
+  <rect width="1000" height="20" y="20" fill="#10141E"/>
+  <circle cx="26" cy="20" r="6" fill="#FF6B6B"/>
+  <circle cx="48" cy="20" r="6" fill="#FFB454"/>
+  <circle cx="70" cy="20" r="6" fill="#3DDC97"/>
+  <text x="500" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">lcycode — cli</text>
+  <rect x="0" y="40" width="6" height="420" fill="url(#tbar)"/>
+
+  <g font-family="'JetBrains Mono',monospace" font-size="15" fill="#C8D0E0">
+    <text x="34" y="80" fill="#3DDC97">$ ./run.sh cli</text>
+
+    <text x="34" y="115" fill="#7C5CFF">
+      you› build a REST endpoint that returns server uptime
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.02;0.08;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="150" fill="#838EA6">
+      [describe] ● ollama · deepseek-coder:1.3b · 0.9s
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.10;0.16;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="34" y="175" fill="#838EA6">
+      [plan]     ● ollama · 3 steps
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.18;0.24;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="210" fill="#FFB454">
+      [execute]  step 1/3 → write_file routes/uptime.py
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.26;0.32;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="34" y="235" fill="#3DDC97">
+      + def get_uptime(): return {"uptime_s": time.time() - START}
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.34;0.40;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="270" fill="#FFB454">
+      [execute]  step 2/3 → run_tests
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.42;0.48;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+    <text x="34" y="295" fill="#3DDC97">
+      ✓ 4 passed in 0.31s
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.50;0.55;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="330" fill="#FFB454">
+      [execute]  step 3/3 → git_commit "add uptime endpoint"
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.57;0.63;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="365" fill="#FF6B6B">
+      [review]   complete: true
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.65;0.71;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+
+    <text x="34" y="400" fill="#E6E9EF">
+      ✔ done in 3 iterations · 100% ollama · $0.00
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.73;0.79;1" dur="14s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <rect x="34" y="410" width="10" height="20" fill="#3DDC97">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

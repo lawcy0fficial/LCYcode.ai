@@ -1,0 +1,67 @@
+<svg width="420" height="480" viewBox="0 0 420 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="haloG" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#3DDC97" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0B0E14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="coreG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/>
+      <stop offset="50%" stop-color="#3DDC97"/>
+      <stop offset="100%" stop-color="#FFB454"/>
+    </linearGradient>
+    <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#151A26"/>
+      <stop offset="100%" stop-color="#0B0E14"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="480" fill="#0B0E14"/>
+  <circle cx="210" cy="200" r="220" fill="url(#haloG)">
+    <animate attributeName="r" values="200;230;200" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- orbiting particles -->
+  <g fill="#3DDC97">
+    <circle cx="210" cy="40" r="3"><animateTransform attributeName="transform" type="rotate" from="0 210 200" to="360 210 200" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="40" r="2.4" fill="#7C5CFF"><animateTransform attributeName="transform" type="rotate" from="120 210 200" to="480 210 200" dur="9s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="40" r="2" fill="#FFB454"><animateTransform attributeName="transform" type="rotate" from="240 210 200" to="600 210 200" dur="9s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- hooded/robed silhouette suggesting a calm figure -->
+  <path d="M210,120
+           C150,120 108,168 104,232
+           L96,400
+           C96,420 320,420 320,400
+           L316,232
+           C312,168 270,120 210,120 Z"
+        fill="url(#bodyG)" stroke="#232938" stroke-width="2"/>
+
+  <!-- head / hood -->
+  <circle cx="210" cy="150" r="70" fill="#10141E" stroke="#232938" stroke-width="2"/>
+
+  <!-- glowing terminal-core face -->
+  <rect x="160" y="128" width="100" height="52" rx="10" fill="#0B0E14" stroke="url(#coreG)" stroke-width="2.5"/>
+  <text x="210" y="160" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="22" fill="#3DDC97">
+    &gt;_
+    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- chest core -->
+  <circle cx="210" cy="270" r="26" fill="#0B0E14" stroke="url(#coreG)" stroke-width="3">
+    <animate attributeName="r" values="24;29;24" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="210" cy="270" r="10" fill="url(#coreG)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- data-stream lines flowing down the robe -->
+  <g stroke="#3DDC97" stroke-width="1.4" opacity="0.55">
+    <line x1="150" y1="320" x2="150" y2="390"><animate attributeName="opacity" values="0;0.7;0" dur="2.6s" repeatCount="indefinite"/></line>
+    <line x1="270" y1="320" x2="270" y2="390"><animate attributeName="opacity" values="0;0.7;0" dur="2.6s" begin="0.6s" repeatCount="indefinite"/></line>
+    <line x1="210" y1="320" x2="210" y2="400" stroke="#7C5CFF"><animate attributeName="opacity" values="0;0.7;0" dur="2.6s" begin="1.2s" repeatCount="indefinite"/></line>
+  </g>
+
+  <text x="210" y="450" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#E6E9EF">the agent, visualized</text>
+  <text x="210" y="470" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#838EA6">no face needed — just the loop, running</text>
+</svg>

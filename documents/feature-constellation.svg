@@ -1,0 +1,55 @@
+<svg width="1000" height="480" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="cbg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#151A26"/><stop offset="100%" stop-color="#0B0E14"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="480" fill="url(#cbg)"/>
+  <text x="500" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="18" font-weight="700" fill="#E6E9EF">✦ feature constellation ✦</text>
+
+  <circle cx="500" cy="260" r="4" fill="#E6E9EF"/>
+
+  <g font-family="'JetBrains Mono',monospace" font-size="11.5" font-weight="700" text-anchor="middle">
+    <!-- star nodes scattered -->
+    <g>
+      <circle cx="180" cy="120" r="5" fill="#7C5CFF"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></circle>
+      <text x="180" y="105" fill="#7C5CFF">offline-first routing</text>
+      <line x1="180" y1="125" x2="500" y2="260" stroke="#7C5CFF" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="830" cy="110" r="5" fill="#3DDC97"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <text x="830" y="95" fill="#3DDC97">resumable builds</text>
+      <line x1="830" y1="115" x2="500" y2="260" stroke="#3DDC97" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="130" cy="260" r="5" fill="#FFB454"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <text x="130" y="245" fill="#FFB454">15 sandboxed tools</text>
+      <line x1="130" y1="265" x2="500" y2="260" stroke="#FFB454" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="880" cy="270" r="5" fill="#FF6B6B"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" begin="0.9s" repeatCount="indefinite"/></circle>
+      <text x="880" y="255" fill="#FF6B6B">cooperative cancel</text>
+      <line x1="880" y1="275" x2="500" y2="260" stroke="#FF6B6B" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="220" cy="390" r="5" fill="#7C5CFF"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" begin="1.2s" repeatCount="indefinite"/></circle>
+      <text x="220" y="410" fill="#7C5CFF">multi-session WS</text>
+      <line x1="220" y1="385" x2="500" y2="260" stroke="#7C5CFF" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="770" cy="400" r="5" fill="#3DDC97"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <text x="770" y="420" fill="#3DDC97">log compaction</text>
+      <line x1="770" y1="395" x2="500" y2="260" stroke="#3DDC97" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="500" cy="90" r="5" fill="#FFB454"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.3s" begin="1.8s" repeatCount="indefinite"/></circle>
+      <text x="500" y="75" fill="#FFB454">shell guard</text>
+      <line x1="500" y1="95" x2="500" y2="260" stroke="#FFB454" stroke-width="0.7" opacity="0.35"/>
+    </g>
+    <g>
+      <circle cx="500" cy="430" r="5" fill="#FF6B6B"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.6s" begin="2.1s" repeatCount="indefinite"/></circle>
+      <text x="500" y="450" fill="#FF6B6B">137+20 tests</text>
+      <line x1="500" y1="425" x2="500" y2="260" stroke="#FF6B6B" stroke-width="0.7" opacity="0.35"/>
+    </g>
+  </g>
+</svg>

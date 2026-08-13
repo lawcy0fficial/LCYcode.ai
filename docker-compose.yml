@@ -1,0 +1,25 @@
+services:
+  lcycode:
+    build: .
+    ports:
+      - "8420:8420"
+    volumes:
+      - ./key.json:/app/key.json:ro
+      - ./workspace:/app/workspace
+    environment:
+      # If Ollama runs on the host machine rather than in a container,
+      # point key.json's ollama.host at http://host.docker.internal:11434
+      - PYTHONUNBUFFERED=1
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      # Mirrors the Dockerfile's HEALTHCHECK — kept explicit here too so
+      # `docker compose ps` shows status without needing to inspect the
+      # image, and so interval/retries are easy to tune per environment
+      # without editing the Dockerfile.
+      test: ["CMD", "python3", "-c",
+             "import json,urllib.request,sys; d=json.load(urllib.request.urlopen('http://localhost:8420/api/health', timeout=3)); sys.exit(0 if d.get('status')=='ok' else 1)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3

@@ -1,0 +1,93 @@
+<svg width="1000" height="420" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="420" fill="#0B0E14"/>
+  <text x="500" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="18" font-weight="700" fill="#E6E9EF">15 tools · all sandboxed to workspace/</text>
+
+  <g font-family="'JetBrains Mono',monospace" font-size="12.5" font-weight="600">
+    <!-- row helper via manual placement, 5 cols x 3 rows -->
+  </g>
+
+  <g id="chips">
+  </g>
+
+  <script><![CDATA[]]></script>
+
+  <!-- generated chips -->
+  <g font-family="'JetBrains Mono',monospace" font-size="12.5" font-weight="600" text-anchor="middle">
+    <!-- Row 1: filesystem (violet) -->
+    <g>
+      <rect x="40" y="80" width="168" height="46" rx="10" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.0s" repeatCount="indefinite"/></rect>
+      <text x="124" y="108" fill="#7C5CFF">write_file</text>
+    </g>
+    <g>
+      <rect x="224" y="80" width="168" height="46" rx="10" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.2s" repeatCount="indefinite"/></rect>
+      <text x="308" y="108" fill="#7C5CFF">read_file</text>
+    </g>
+    <g>
+      <rect x="408" y="80" width="168" height="46" rx="10" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.4s" repeatCount="indefinite"/></rect>
+      <text x="492" y="108" fill="#7C5CFF">edit_file</text>
+    </g>
+    <g>
+      <rect x="592" y="80" width="168" height="46" rx="10" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.6s" repeatCount="indefinite"/></rect>
+      <text x="676" y="108" fill="#7C5CFF">append_file</text>
+    </g>
+    <g>
+      <rect x="776" y="80" width="184" height="46" rx="10" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="0.8s" repeatCount="indefinite"/></rect>
+      <text x="868" y="108" fill="#7C5CFF">delete_file</text>
+    </g>
+
+    <!-- Row 2: shell/search (amber) + git start -->
+    <g>
+      <rect x="40" y="146" width="168" height="46" rx="10" fill="rgba(255,180,84,0.12)" stroke="#FFB454"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="1.0s" repeatCount="indefinite"/></rect>
+      <text x="124" y="174" fill="#FFB454">list_dir</text>
+    </g>
+    <g>
+      <rect x="224" y="146" width="168" height="46" rx="10" fill="rgba(255,180,84,0.12)" stroke="#FFB454"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="1.2s" repeatCount="indefinite"/></rect>
+      <text x="308" y="174" fill="#FFB454">run_shell 🛡</text>
+    </g>
+    <g>
+      <rect x="408" y="146" width="168" height="46" rx="10" fill="rgba(255,180,84,0.12)" stroke="#FFB454"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="1.4s" repeatCount="indefinite"/></rect>
+      <text x="492" y="174" fill="#FFB454">search_files</text>
+    </g>
+    <g>
+      <rect x="592" y="146" width="168" height="46" rx="10" fill="rgba(61,220,151,0.12)" stroke="#3DDC97"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="1.6s" repeatCount="indefinite"/></rect>
+      <text x="676" y="174" fill="#3DDC97">git_init</text>
+    </g>
+    <g>
+      <rect x="776" y="146" width="184" height="46" rx="10" fill="rgba(61,220,151,0.12)" stroke="#3DDC97"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="1.8s" repeatCount="indefinite"/></rect>
+      <text x="868" y="174" fill="#3DDC97">git_status</text>
+    </g>
+
+    <!-- Row 3: rest of git + quality (mint/red) -->
+    <g>
+      <rect x="40" y="212" width="168" height="46" rx="10" fill="rgba(61,220,151,0.12)" stroke="#3DDC97"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="2.0s" repeatCount="indefinite"/></rect>
+      <text x="124" y="240" fill="#3DDC97">git_diff</text>
+    </g>
+    <g>
+      <rect x="224" y="212" width="168" height="46" rx="10" fill="rgba(61,220,151,0.12)" stroke="#3DDC97"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="2.2s" repeatCount="indefinite"/></rect>
+      <text x="308" y="240" fill="#3DDC97">git_commit</text>
+    </g>
+    <g>
+      <rect x="408" y="212" width="168" height="46" rx="10" fill="rgba(61,220,151,0.12)" stroke="#3DDC97"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="2.4s" repeatCount="indefinite"/></rect>
+      <text x="492" y="240" fill="#3DDC97">git_log</text>
+    </g>
+    <g>
+      <rect x="592" y="212" width="168" height="46" rx="10" fill="rgba(255,107,107,0.12)" stroke="#FF6B6B"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="2.6s" repeatCount="indefinite"/></rect>
+      <text x="676" y="240" fill="#FF6B6B">run_tests</text>
+    </g>
+    <g>
+      <rect x="776" y="212" width="184" height="46" rx="10" fill="rgba(255,107,107,0.12)" stroke="#FF6B6B"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.5s" begin="2.8s" repeatCount="indefinite"/></rect>
+      <text x="868" y="240" fill="#FF6B6B">run_lint</text>
+    </g>
+  </g>
+
+  <g font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">
+    <rect x="40" y="290" width="920" height="34" rx="8" fill="none" stroke="#232938"/>
+    <text x="124" y="311" fill="#7C5CFF">■ filesystem</text>
+    <text x="320" y="311" fill="#FFB454">■ shell / search</text>
+    <text x="560" y="311" fill="#3DDC97">■ git</text>
+    <text x="760" y="311" fill="#FF6B6B">■ quality</text>
+  </g>
+
+  <text x="500" y="360" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">every write / edit / delete captures a real before → after diff</text>
+  <text x="500" y="385" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#4a5268">🛡 run_shell only — guarded by shell_guard.py (blocklist + resource ceiling)</text>
+</svg>

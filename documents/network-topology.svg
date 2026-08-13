@@ -1,0 +1,72 @@
+<svg width="1100" height="620" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="ntBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#151A26"/>
+      <stop offset="100%" stop-color="#0B0E14"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1100" height="620" fill="url(#ntBg)"/>
+  <text x="550" y="42" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="19" font-weight="700" fill="#E6E9EF">the whole system, at a glance</text>
+
+  <!-- center node: agent core -->
+  <circle cx="550" cy="320" r="60" fill="#10141E" stroke="url(#coreGrad)" stroke-width="3" filter="url(#glow)"/>
+  <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#3DDC97"/>
+  </linearGradient>
+  <text x="550" y="315" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="700" fill="#E6E9EF">AgentLoop</text>
+  <text x="550" y="333" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#838EA6">core/agent_loop.py</text>
+
+  <!-- satellites -->
+  <g font-family="'JetBrains Mono',monospace" font-size="11.5" font-weight="600" text-anchor="middle">
+    <!-- GUI -->
+    <circle cx="220" cy="140" r="46" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF" stroke-width="2"/>
+    <text x="220" y="136" fill="#7C5CFF">GUI</text>
+    <text x="220" y="152" font-size="9" fill="#838EA6">pipeline rail</text>
+
+    <!-- CLI -->
+    <circle cx="220" cy="500" r="46" fill="rgba(124,92,255,0.12)" stroke="#7C5CFF" stroke-width="2"/>
+    <text x="220" y="496" fill="#7C5CFF">CLI</text>
+    <text x="220" y="512" font-size="9" fill="#838EA6">terminal chat</text>
+
+    <!-- Ollama -->
+    <circle cx="880" cy="140" r="52" fill="rgba(61,220,151,0.14)" stroke="#3DDC97" stroke-width="2.4">
+      <animate attributeName="stroke-width" values="2.4;4;2.4" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="880" y="135" fill="#3DDC97">Ollama</text>
+    <text x="880" y="151" font-size="9" fill="#838EA6">default · free · local</text>
+
+    <!-- Cloud fallback -->
+    <circle cx="880" cy="500" r="46" fill="rgba(255,180,84,0.1)" stroke="#FFB454" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <text x="880" y="496" fill="#FFB454">Cloud</text>
+    <text x="880" y="512" font-size="9" fill="#838EA6">optional fallback</text>
+
+    <!-- Tools -->
+    <circle cx="330" cy="320" r="42" fill="rgba(255,107,107,0.12)" stroke="#FF6B6B" stroke-width="2"/>
+    <text x="330" y="316" fill="#FF6B6B">15 Tools</text>
+    <text x="330" y="332" font-size="9" fill="#838EA6">sandboxed</text>
+
+    <!-- Session store -->
+    <circle cx="770" cy="320" r="42" fill="rgba(255,255,255,0.05)" stroke="#838EA6" stroke-width="1.6"/>
+    <text x="770" y="316" fill="#C8D0E0">Sessions</text>
+    <text x="770" y="332" font-size="9" fill="#838EA6">workspace/.lcycode</text>
+  </g>
+
+  <!-- connectors + animated packets -->
+  <g stroke="#3DDC97" stroke-width="1.6" fill="none" opacity="0.55">
+    <line x1="256" y1="168" x2="500" y2="290"/>
+    <line x1="256" y1="470" x2="500" y2="350"/>
+    <line x1="600" y1="290" x2="828" y2="168"/>
+    <line x1="600" y1="350" x2="828" y2="470"/>
+    <line x1="372" y1="320" x2="490" y2="320"/>
+    <line x1="610" y1="320" x2="728" y2="320"/>
+  </g>
+  <circle r="4" fill="#3DDC97"><animateMotion dur="2.4s" repeatCount="indefinite" path="M256,168 L500,290"/></circle>
+  <circle r="4" fill="#7C5CFF"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite" path="M256,470 L500,350"/></circle>
+  <circle r="4" fill="#3DDC97"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M600,290 L828,168"/></circle>
+  <circle r="4" fill="#FFB454"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M600,350 L828,470"/></circle>
+  <circle r="4" fill="#FF6B6B"><animateMotion dur="1.6s" repeatCount="indefinite" path="M372,320 L490,320"/></circle>
+  <circle r="4" fill="#C8D0E0"><animateMotion dur="1.6s" begin="0.5s" repeatCount="indefinite" path="M610,320 L728,320"/></circle>
+
+  <text x="550" y="590" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#838EA6">every arrow above is a real call in the codebase — not a marketing diagram</text>
+</svg>

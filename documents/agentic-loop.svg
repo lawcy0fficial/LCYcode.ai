@@ -1,0 +1,73 @@
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#151A26"/>
+      <stop offset="100%" stop-color="#0B0E14"/>
+    </radialGradient>
+    <path id="loopPath" d="M320,120 A200,200 0 1,1 319.9,120" fill="none"/>
+  </defs>
+
+  <rect width="640" height="640" fill="#0B0E14"/>
+  <circle cx="320" cy="320" r="230" fill="url(#core)" stroke="#232938"/>
+  <circle cx="320" cy="320" r="200" fill="none" stroke="#232938" stroke-width="2" stroke-dasharray="2 6"/>
+
+  <!-- center label -->
+  <text x="320" y="310" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" fill="#838EA6">THE AGENTIC LOOP</text>
+  <text x="320" y="335" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#4a5268">max 40 iters / call · auto-resume via "pending"</text>
+
+  <!-- traveling packet -->
+  <circle r="9" fill="#3DDC97">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M320,120 A200,200 0 1,1 319.9,120"/>
+    <animate attributeName="fill" values="#7C5CFF;#3DDC97;#FFB454;#FF6B6B;#7C5CFF" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="16" fill="none" stroke="#3DDC97" stroke-width="1.5" opacity="0.5">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M320,120 A200,200 0 1,1 319.9,120"/>
+  </circle>
+
+  <!-- DESCRIBE node : top -->
+  <g>
+    <circle cx="320" cy="120" r="54" fill="#10141E" stroke="#7C5CFF" stroke-width="2.5">
+      <animate attributeName="stroke-width" values="2.5;5;2.5" dur="6s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <text x="320" y="112" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#7C5CFF">DESCRIBE</text>
+    <text x="320" y="132" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#838EA6">task → JSON</text>
+  </g>
+
+  <!-- PLAN node : right -->
+  <g>
+    <circle cx="520" cy="320" r="54" fill="#10141E" stroke="#3DDC97" stroke-width="2.5">
+      <animate attributeName="stroke-width" values="2.5;5;2.5" dur="6s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="520" y="312" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#3DDC97">PLAN</text>
+    <text x="520" y="332" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#838EA6">ordered steps</text>
+  </g>
+
+  <!-- EXECUTE node : bottom -->
+  <g>
+    <circle cx="320" cy="520" r="54" fill="#10141E" stroke="#FFB454" stroke-width="2.5">
+      <animate attributeName="stroke-width" values="2.5;5;2.5" dur="6s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="320" y="512" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#FFB454">EXECUTE</text>
+    <text x="320" y="532" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#838EA6">tool calls, 1 step</text>
+  </g>
+
+  <!-- REVIEW node : left -->
+  <g>
+    <circle cx="120" cy="320" r="54" fill="#10141E" stroke="#FF6B6B" stroke-width="2.5">
+      <animate attributeName="stroke-width" values="2.5;5;2.5" dur="6s" begin="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="120" y="312" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" fill="#FF6B6B">REVIEW</text>
+    <text x="120" y="332" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#838EA6">complete? y/n</text>
+  </g>
+
+  <!-- pending badge that fades in/out to show pause+resume -->
+  <g>
+    <rect x="255" y="590" width="130" height="26" rx="13" fill="rgba(255,180,84,0.12)" stroke="#FFB454">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.45;0.55;0.9;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="320" y="607" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#FFB454">
+      pending → resume
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.45;0.55;0.9;1" dur="6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>

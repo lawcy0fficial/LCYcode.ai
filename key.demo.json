@@ -1,0 +1,41 @@
+{
+  "openrouter": {
+    "keys": [
+      "sk-or-v1-REPLACE_WITH_KEY_1",
+      "sk-or-v1-REPLACE_WITH_KEY_2"
+    ],
+    "models": [
+      "nvidia/llama-3.1-nemotron-70b-instruct:free",
+      "nvidia/nemotron-nano-9b-v2:free",
+      "meta-llama/llama-3.3-70b-instruct:free",
+      "deepseek/deepseek-chat-v3.1:free"
+    ]
+  },
+  "grok": {
+    "keys": [
+      "xai-REPLACE_WITH_GROK_KEY"
+    ],
+    "model": "grok-2-latest"
+  },
+  "deepseek": {
+    "keys": [
+      "sk-REPLACE_WITH_DEEPSEEK_KEY"
+    ],
+    "model": "deepseek-chat"
+  },
+  "ollama": {
+    "host": "http://127.0.0.1:11434",
+    "model": "deepseek-coder:1.3b",
+    "enabled": true,
+    "offline_only": true,
+    "auto_pull": true
+  },
+  "routing": {
+    "order": ["ollama", "openrouter", "deepseek", "grok"],
+    "max_iterations": 40,
+    "tool_timeout_seconds": 60,
+    "auto_continue": true,
+    "max_total_iterations": 1000,
+    "_comment": "offline_only above forces every stage (Describe/Plan/Execute/Review) through ollama only, at zero cost, regardless of this order. There is no Anthropic API provider in this project on purpose — if you want to use Claude Code against this same Ollama setup, run ./setup-claude-code.sh instead, which drives the real Claude Code CLI directly against Ollama with no Anthropic account, login, or API key involved anywhere. openrouter/deepseek/grok above are optional cloud fallback, off by default, only ever used if you add real keys and set offline_only to false. auto_continue chains resumes automatically past max_iterations, up to max_total_iterations as a hard safety ceiling, so a build doesn't stall waiting for a manual Continue click."
+  }
+}

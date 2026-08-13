@@ -1,0 +1,32 @@
+<svg width="820" height="360" viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg">
+  <rect width="820" height="360" fill="#0B0E14"/>
+  <text x="410" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="17" font-weight="700" fill="#E6E9EF">compaction.py — measured on a 60-iteration / 8KB-per-file run</text>
+
+  <!-- Before bar -->
+  <text x="220" y="90" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#FF6B6B">before</text>
+  <rect x="140" y="100" width="160" height="20" fill="#151A26" stroke="#232938"/>
+  <rect x="140" y="100" width="160" height="20" fill="#FF6B6B">
+    <animate attributeName="width" values="0;160;160" keyTimes="0;0.5;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="220" y="145" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">full log, every entry, full file content</text>
+
+  <!-- After bar -->
+  <text x="600" y="90" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#3DDC97">after compaction</text>
+  <rect x="520" y="100" width="160" height="20" fill="#151A26" stroke="#232938"/>
+  <rect x="520" y="100" width="54" height="20" fill="#3DDC97">
+    <animate attributeName="width" values="0;0;54" keyTimes="0;0.5;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="600" y="145" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">most-recent 20 stay full, rest summarized</text>
+
+  <!-- big percentage -->
+  <text x="410" y="230" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="70" font-weight="800" fill="#3DDC97">
+    66%
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.55;0.65" dur="5s" repeatCount="indefinite"/>
+  </text>
+  <text x="410" y="262" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" fill="#E6E9EF">
+    smaller on disk
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.6;0.7" dur="5s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="410" y="310" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#838EA6">execute.py / review.py only ever look at the most recent 10 entries — compaction never removes detail the model still uses</text>
+</svg>
