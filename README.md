@@ -1,2 +1,0 @@
-# LCYcode.ai
-m
