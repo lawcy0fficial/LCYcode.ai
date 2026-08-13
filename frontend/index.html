@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCYcode.ai</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="app">
+  <div class="sidebar">
+    <div class="logo">LCY<span>code</span>.ai</div>
+    <div class="tagline">offline-first agentic coding — no login</div>
+
+    <div class="section-label">Providers</div>
+    <div id="offlineBadge" class="offline-badge" style="display:none;"></div>
+    <div id="providers"></div>
+
+    <div class="section-label" style="margin-top:20px;">Session</div>
+    <button id="newSessionBtn" class="ghost-btn">New session</button>
+    <label class="toggle-row">
+      <input type="checkbox" id="autoContinueToggle">
+      <span>Auto-continue builds</span>
+    </label>
+
+    <div class="rail" id="rail">
+      <div class="section-label" style="margin-top:24px;">Pipeline</div>
+      <div class="stage" data-stage="DESCRIBE">Describe<span class="provider-tag"></span></div>
+      <div class="stage" data-stage="PLAN">Plan<span class="provider-tag"></span></div>
+      <div class="stage" data-stage="EXECUTE">Execute<span class="provider-tag"></span></div>
+      <div class="stage" data-stage="REVIEW">Review<span class="provider-tag"></span></div>
+      <div class="stage" data-stage="DONE">Done</div>
+    </div>
+  </div>
+
+  <div class="chat-col">
+    <div class="chat-log" id="chatLog"></div>
+    <div class="continue-bar" id="continueBar">
+      <span>Build paused — iteration cap reached, task not yet complete.</span>
+      <button id="continueBtn">Continue building</button>
+    </div>
+    <div class="composer">
+      <input id="msgInput" placeholder="Describe what to build..." autocomplete="off">
+      <button id="sendBtn">Run</button>
+      <button id="stopBtn" class="stop-btn" style="display:none;" title="Cancel the in-flight run">Stop</button>
+    </div>
+  </div>
+
+  <div class="code-col">
+    <div class="code-header"><span>Live workspace</span><span id="fileCount">0 files</span></div>
+    <div class="code-tabs" id="codeTabs"></div>
+    <div class="code-view" id="codeView"><div class="empty-state">Files written by the agent will stream in here as it works.</div></div>
+  </div>
+</div>
+
+<script src="/static/js/logic.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
